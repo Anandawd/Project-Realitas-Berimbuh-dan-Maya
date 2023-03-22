@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <a-scene>
+      <!-- Asset Management System-->
+      <a-assets>
+        <img id="texture-1" src="image/texture/wood/Wood_027_basecolor.jpg" />
+        <img id="texture-2" src="image/texture/wood/Wood_027_roughness.jpg" />
+        <img
+          id="texture-3"
+          src="image/texture/plastic/Plastic_003_ambientOcclusion.jpg"
+        />
+        <img
+          id="texture-4"
+          src="image/texture/plastic/Plastic_003_height.jpg"
+        />
+        <img
+          id="texture-5"
+          src="image/texture/plastic/Plastic_003_basecolor.jpg"
+        />
+        <img
+          id="texture-6"
+          src="image/texture/plastic/Plastic_003_metallic.jpg"
+        />
+        <img
+          id="pano-1"
+          src="image/panorama/wallpaperflare.com_wallpaper.jpg"
+        />
+        <img
+          id="floor-1"
+          src="image/floor/Substance_Graph_AmbientOcclusion.jpg"
+        />
+        <img
+          id="pano-2"
+          src="image/panorama/vecteezy_panorama-sky-with-cloud-on-a-sunny-day_6694377_93.jpg"
+        />
+      </a-assets>
+
+      <!-- Sky -->
+      <a-sky src="#pano-2"> </a-sky>
+
+      <!-- Floor -->
+      <a-plane
+        material="color: #ffff; src: #floor-1; repeat: 10 10"
+        rotation="-90 0 0"
+        scale="100 100 1"
+      >
+      </a-plane>
+      <!-- Objek Meja -->
+      <a-box
+        color="#0000"
+        src="image/Wood_027_basecolor.jpg"
+        repeat="1 1"
+        normal-map="#texture-1"
+        normal-texture-repeat="1 1"
+        width="3"
+        height="0.1"
+        depth="1"
+        position="0 1 0"
+      >
+        <a-cylinder
+          color="#0000"
+          src="#texture-2"
+          radius="0.1"
+          height="0.5"
+          depth="0.5"
+          position="-1.4 -0.21 0.4"
+        ></a-cylinder>
+
+        <a-cylinder
+          color="#0000"
+          src="#texture-2"
+          radius="0.1"
+          height="0.5"
+          depth="0.5"
+          position="1.4 -0.21 0.4"
+        ></a-cylinder>
+
+        <a-cylinder
+          color="#0000"
+          src="#texture-2"
+          radius="0.1"
+          height="0.5"
+          depth="0.5"
+          position="1.4 -0.21 -0.4"
+        ></a-cylinder>
+
+        <a-cylinder
+          color="#0000"
+          src="#texture-2"
+          radius="0.1"
+          height="0.5"
+          depth="0.5"
+          position="-1.4 -0.21 -0.4"
+        ></a-cylinder>
+      </a-box>
+
+      <!-- Objek Monitor-->
+      <a-box
+        color="#0000"
+        src="#texture-3"
+        repeat="1 1"
+        normal-map="#texture-1"
+        normal-texture-repeat="1 1"
+        width="1.2"
+        height="0.05"
+        depth="0.2"
+        position="0 1.1 0"
+      >
+        <!-- Tiang Monitor-->
+        <a-box
+          color="#0000"
+          src="#texture-4"
+          repeat="1 1"
+          normal-map="#texture-1"
+          normal-texture-repeat="1 1"
+          width="0.2"
+          height="0.8"
+          depth="0.04"
+          position="0 0.41 -0.04"
+        >
+        </a-box>
+
+        <a-box
+          color="#0000"
+          src="#texture-4"
+          repeat="1 1"
+          normal-map="#texture-1"
+          normal-texture-repeat="1 1"
+          width="0.4"
+          height="0.3"
+          depth="0.04"
+          position="0 0.81 -0.01"
+        >
+        </a-box>
+
+        <!-- Frame Monitor-->
+        <a-box
+          color="#0000"
+          src="#texture-5"
+          repeat="1 1"
+          normal-map="#texture-1"
+          normal-texture-repeat="1 1"
+          radius="2"
+          width="2"
+          height="1"
+          depth="0.03"
+          position="0 0.7 0.03"
+        >
+          <!-- LCD Monitor-->
+          <a-box
+            color="#0000"
+            src="#texture-6"
+            width="1.9"
+            height="0.9"
+            depth="0.03"
+            position="0 0 0.01"
+          >
+          </a-box
+        ></a-box>
+      </a-box>
+    </a-scene>
+  </body>
+</html>
