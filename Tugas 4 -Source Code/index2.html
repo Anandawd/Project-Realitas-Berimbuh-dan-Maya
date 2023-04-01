@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <title>Tugas 4 - VR 3D Object</title>
+  </head>
+  <body>
+    <a-scene>
+      <!-- Asset Management System -->
+      <a-assets>
+        <img id="sky" src="assets/img/sky_Moonscape.jpg" />
+        <a-asset-item
+          id="village"
+          src="assets/castle_village_scene/scene.gltf"
+        ></a-asset-item>
+        <a-asset-item
+          id="catapult"
+          src="assets/catapult/source/model.gltf"
+        ></a-asset-item>
+      </a-assets>
+
+      <!-- Sky -->
+      <a-sky src="#sky"></a-sky>
+
+      <!-- Camera -->
+      <a-entity position="0 2 30" rotation="0 0 0">
+        <a-camera></a-camera>
+      </a-entity>
+
+      <!-- Castle -->
+      <a-entity
+        gltf-model="#village"
+        scale="40 40 40"
+        position="0 0 0"
+        rotation="0 0 0"
+      ></a-entity>
+
+      <a-entity
+        gltf-model="#catapult"
+        position="-5 0.4 24"
+        scale="0.6 0.6 0.6"
+        rotation="0 30 0"
+      ></a-entity>
+    </a-scene>
+  </body>
+</html>

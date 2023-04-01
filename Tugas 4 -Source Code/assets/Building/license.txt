@@ -1,0 +1,11 @@
+Model Information:
+* title:	Classical Monument Building 19th Century
+* source:	https://sketchfab.com/3d-models/classical-monument-building-19th-century-50e1b08d08b6451a8e1c0d50e7660db7
+* author:	Zaheer Ul Islam (https://sketchfab.com/ZaheerUlIslam)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Classical Monument Building 19th Century" (https://sketchfab.com/3d-models/classical-monument-building-19th-century-50e1b08d08b6451a8e1c0d50e7660db7) by Zaheer Ul Islam (https://sketchfab.com/ZaheerUlIslam) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
