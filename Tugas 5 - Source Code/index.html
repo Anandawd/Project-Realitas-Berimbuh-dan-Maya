@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tugas 5</title>
+    <!-- library -->
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.0/dist/aframe-extras.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+  </head>
+  <body style="margin: 0px; overflow: hidden">
+    <a-scene
+      embedded
+      arjs="detectionMode: mono_and_matrix; matrixCodeType: 3x3;"
+    >
+      <!-- Asset Management System -->
+      <a-assets>
+        <a-asset-item
+          id="car-cartoon"
+          src="assets/cartoon_car/scene.gltf"
+        ></a-asset-item>
+      </a-assets>
+
+      <!-- marker Hiro -->
+      <a-marker preset="hiro">
+        <!-- Car -->
+        <a-entity gltf-model="#car-cartoon" scale="0.2 0.2 0.2"></a-entity>
+      </a-marker>
+
+      <!-- marker kanji -->
+      <a-marker preset="kanji">
+        <a-box
+          color="#00ff00"
+          material="opacity:0.5"
+          scale="0.5 0.5 0.5"
+          animation__putar="property:rotation; from:0 0 0; to:0 360 0; startEvents:mouseenter;"
+        ></a-box>
+      </a-marker>
+
+      <!-- marker barcode-->
+      <a-marker type="barcode" value="5">
+        <a-box
+          color="#ff0000"
+          material="opacity:0.5"
+          scale="0.5 0.5 0.5"
+          animation__putar="property:rotation; from:0 0 0; to:0 360 0; startEvents:mouseenter;"
+        ></a-box>
+      </a-marker>
+
+      <!-- marker pattern -->
+      <a-marker type="pattern" url="pattern/pattern-marker.patt">
+        <!-- Car
+        <a-entity gltf-model="burger"></a-entity> -->
+        <a-box
+          color="#ff00ff"
+          material="opacity:0.5"
+          scale="0.5 0.5 0.5"
+          animation__putar="property:rotation; from:0 0 0; to:0 360 0; startEvents:mouseenter;"
+        ></a-box>
+      </a-marker>
+
+      <a-entity camera>
+        <a-cursor></a-cursor>
+      </a-entity>
+    </a-scene>
+  </body>
+</html>
